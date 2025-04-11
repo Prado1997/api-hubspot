@@ -1,0 +1,153 @@
+type: collection.insomnia.rest/5.0
+name: API HubSpot
+meta:
+  id: wrk_810cb5546b244b1f8612b54c215a0cd9
+  created: 1744209577475
+  modified: 1744209577475
+collection:
+  - url: http://localhost:8080/login
+    name: Obter Token
+    meta:
+      id: req_1f34152f8d0c48339295823d01552da5
+      created: 1744209583462
+      modified: 1744393999822
+      isPrivate: false
+      sortKey: -1744209583462
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"code": "na1-29bf-42c1-4650-81c0-2eda4e8ef31b"
+        }
+    parameters:
+      - id: pair_66c9d078cc8e4154ab7859138ea31df1
+        name: grant_type
+        value: authorization_code
+        disabled: true
+      - id: pair_c966fc1bf522497ead8ba392b8049fa3
+        name: client_id
+        value: 40521ef8-c704-4539-8767-c54f5ee9905c
+        disabled: true
+      - id: pair_6cc8a903fe6b418d9c5b1055a1c2b44d
+        name: client_secret
+        value: e5713377-6787-4223-aaff-9c11badbeeb0
+        disabled: true
+      - id: pair_f1fcdd121fbe4edabb71b4901c02b2ee
+        name: redirect_uri
+        value: http://localhost:8080/callback
+        disabled: true
+      - id: pair_377535cdd5f34ee585f6af906e1fbf5b
+        name: code
+        value: na1-5efc-cc14-488b-b6cf-b39220944347
+        disabled: true
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7963fb8c826444a0859b5078aa933fe8
+        disabled: false
+      - name: User-Agent
+        value: insomnia/11.0.1
+        id: pair_f3371c6501c24208876515df917f9c92
+    authentication:
+      type: oauth2
+      grantType: authorization_code
+      usePkce: false
+      pkceMethod: S256
+      disabled: true
+      credentialsInBody: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/contatos
+    name: Criar Contato
+    meta:
+      id: req_fd6120f86d6f445eb0d0b72b464f4d51
+      created: 1744314619565
+      modified: 1744394015787
+      isPrivate: false
+      sortKey: -1744314619565
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "properties": {
+            "email": "fe1113@ubspot.com",
+            "firstname": "Jaene",
+        		"lastname": "Johnson",
+            "phone": "(555) 555-5555",
+            "company": "HubSpot",
+            "website": "hubspot.com",
+            "lifecyclestage": "marketingqualifiedlead"
+          }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: CJO73bDiMhIHAAEAQAAAARjv39YXIJb75CUo_KiNBTIUYzpQ73zgY__7r7iq2O3-8K6QQ0M6MAAAAEEAAAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAOABAAAAAAAAAAAAAAAQAkIUlaig_IknfcbcoacenRajBVmEzZBKA25hMVIAWgBgAGiW--QlcAA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/contatos/113245840173
+    name: Listar Contato por Id
+    meta:
+      id: req_d695eae44ea249ff9fc7677ba2b69d27
+      created: 1744379946899
+      modified: 1744394031022
+      isPrivate: false
+      sortKey: -1744379946899
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    authentication:
+      type: bearer
+      token: CJO73bDiMhIHAAEAQAAAARjv39YXIJb75CUo_KiNBTIUYzpQ73zgY__7r7iq2O3-8K6QQ0M6MAAAAEEAAAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAOABAAAAAAAAAAAAAAAQAkIUlaig_IknfcbcoacenRajBVmEzZBKA25hMVIAWgBgAGiW--QlcAA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5a600b90f54775773594299edf2488897c3037c1
+    created: 1744209577485
+    modified: 1744380179375
+  cookies:
+    - key: __cf_bm
+      value: 3FHWOwzmHsGzGuSq75z8olIE54aokqPZ92W6.fmDr5Y-1744380165-1.0.1.1-gRJcyntz0dAXBI5.ZMclon.1rPNw6vZfgheRhG7Ux5.umKdeBHFhR_PrTR518XAn.MXhLzrdqaxfMUDjPTO6zPJhlDoD16eOyam55v1nyhM
+      domain: hubapi.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2025-04-09T14:43:34.344Z
+      lastAccessed: 2025-04-11T14:02:59.371Z
+      sameSite: none
+      id: df1eb8c4-3dd0-4bb8-adba-ff50f3d67090
+environments:
+  name: Base Environment
+  meta:
+    id: env_5a600b90f54775773594299edf2488897c3037c1
+    created: 1744209577480
+    modified: 1744209577480
+    isPrivate: false
